@@ -21,10 +21,10 @@ public class productController {
         return productRepository.findAll();
     }
     
-    @GetMapping('/{id}')
-    public Product getProductById(@PathVariable Long Id){
+    @GetMapping("/{id}")
+    public Product getProductById(@PathVariable Long id){
         return productRepository.findById(id)
-            .orElseThrow(() -> new RuntimeExcpetion ("Product Not Found");
+            .orElseThrow(() -> new RuntimeException("Product Not Found"));
     }
 
 
