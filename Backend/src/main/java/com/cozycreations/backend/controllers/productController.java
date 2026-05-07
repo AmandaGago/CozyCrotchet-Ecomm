@@ -20,6 +20,12 @@ public class productController {
     public List<Product> getAllProduct() {
         return productRepository.findAll();
     }
+    
+    @GetMapping('/{id}')
+    public Product getProductById(@PathVariable Long Id){
+        return productRepository.findById(id)
+            .orElseThrow(() -> new RuntimeExcpetion ("Product Not Found");
+    }
 
 
     @PostMapping
