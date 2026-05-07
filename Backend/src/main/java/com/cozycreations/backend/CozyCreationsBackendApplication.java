@@ -9,5 +9,4 @@ public class CozyCreationsBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(CozyCreationsBackendApplication.class, args);
     }
-
 }
